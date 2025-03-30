@@ -7,6 +7,7 @@ namespace WebAppMetalurgica.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly string _caminhoImagens = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "image"); 
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -28,5 +29,6 @@ namespace WebAppMetalurgica.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }
